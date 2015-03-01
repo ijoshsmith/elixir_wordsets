@@ -1,4 +1,4 @@
-## Find symmetrical word combinations with Elixir
+## Overview
 This Elixir program implements a parallelized algorithm to discover word combinations that, when written on separate lines, read the same both horizontally and vertically. For example:
 ```
 J O S H
