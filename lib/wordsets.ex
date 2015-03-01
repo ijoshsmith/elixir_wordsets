@@ -1,14 +1,14 @@
 defmodule Wordsets do
 
-	alias Wordsets.Cache
-	alias Wordsets.Engine
-	alias Wordsets.Lexicon
-	alias Wordsets.Util
+  alias Wordsets.Cache
+  alias Wordsets.Engine
+  alias Wordsets.Lexicon
+  alias Wordsets.Util
 
   def init do
     Lexicon.create
-	  Cache.create
-		:ok
+    Cache.create
+    :ok
   end
 
   def find(word) do
