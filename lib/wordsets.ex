@@ -6,8 +6,8 @@ defmodule Wordsets do
 	alias Wordsets.Util
 
   def init do
-  	Lexicon.create
-		Cache.create
+    Lexicon.create
+	  Cache.create
 		:ok
   end
 

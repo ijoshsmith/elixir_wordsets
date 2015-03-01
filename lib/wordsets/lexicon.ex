@@ -25,7 +25,7 @@ defmodule Wordsets.Lexicon do
     IO.puts "Loading words…"
     { time, index } = :timer.tc fn -> do_load_words |> create_index end
     :io.format "Indexed lexicon in ~3.1f seconds.~n", [(time / 1_000_000)]
-		index
+    index
   end
 
   defp do_load_words() do
@@ -34,9 +34,9 @@ defmodule Wordsets.Lexicon do
       {:ok, words} -> words 
                       |> String.split("\n")
                       |> Enum.filter(&String.length(&1) > 1) # remove one-letter words
-											|> Enum.map(&String.downcase/1)        # apply uniform casing
-											|> Enum.into(HashSet.new)              # remove duplicates
-											|> Enum.to_list                        # use a list for speed
+                      |> Enum.map(&String.downcase/1)        # apply uniform casing
+                      |> Enum.into(HashSet.new)              # remove duplicates
+                      |> Enum.to_list                        # use a list for speed
     end
   end
   
@@ -54,7 +54,7 @@ defmodule Wordsets.Lexicon do
   defp do_create_index(words, key_length) do
     words
     |> Enum.filter(&String.length(&1) >= key_length)
-		|> do_create_index(key_length, HashDict.new)
+    |> do_create_index(key_length, HashDict.new)
   end
   
   defp do_create_index([word | tail], key_length, index) do
