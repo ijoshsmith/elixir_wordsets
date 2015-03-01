@@ -7,11 +7,11 @@ S O F A
 H E A D
 ```
 ## How to run the program
-Assuming you have Elixir installed, open Terminal in this project's root directory and load this project's *mix.exs* file in the interactive Elixir console (IEx):
+Assuming you have [Elixir](http://elixir-lang.org/install.html) installed, open Terminal in this project's root directory and load its *mix.exs* file into the interactive Elixir console (IEx):
 ```
 $ iex -S mix
 ```
-Now set up the processing environment…
+Next set up the processing environment…
 ```
 iex(1)> Wordsets.init  # initialize the Lexicon and Cache processes 
 Loading words…
