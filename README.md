@@ -18,7 +18,7 @@ Loading words…
 Indexed lexicon in 6.7 seconds.
 :ok
 ```
-Now start searching for wordsets that start with a certain word, such as *elixir*.
+Now search for wordsets that start with a certain word, such as *elixir*.
 ```
 iex(2)> Wordsets.find "elixir"                                     
 elixir
