@@ -22,7 +22,7 @@ defmodule EngineTest do
     :ok
   end
   
-  # Called immediately after each test completes.
+  # Called before each test runs.
   setup do
     Cache.clear
     :ok
@@ -42,9 +42,9 @@ defmodule EngineTest do
       end
     end
     search("tea", find_words, &Cache.add/1)
-    assert Cache.get == [Enum.join(["tea", "ear", "are"], "\n"), 
-                         Enum.join(["tea", "ear", "art"], "\n"), 
-                         Enum.join(["tea", "eat", "ate"], "\n")]
+    assert Cache.get == [Util.wordset_from(["tea", "ear", "are"]), 
+                         Util.wordset_from(["tea", "ear", "art"]), 
+                         Util.wordset_from(["tea", "eat", "ate"])]
   end
   
   test "finds no wordsets if none are available" do
@@ -68,7 +68,7 @@ defmodule EngineTest do
     assert length(Cache.get) == 0
   end  
   
-  test "using real lexicon for TEA word" do
+  test "using real lexicon for TEA" do
     search("tea", &Lexicon.find_words/2, &Cache.add/1)
     assert Cache.get |> Enum.all?(&Util.is_valid_wordset/1)
   end

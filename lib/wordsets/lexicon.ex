@@ -1,4 +1,4 @@
-# Provides words used by an wordset engine.
+# Provides words used by a wordset engine.
 defmodule Wordsets.Lexicon do
 
   @agent     __MODULE__
@@ -23,7 +23,7 @@ defmodule Wordsets.Lexicon do
   
   defp load_words() do
     IO.puts "Loading words…"
-    { time, index } = :timer.tc fn -> do_load_words |> create_index end
+    {time, index} = :timer.tc fn -> do_load_words |> create_index end
     :io.format "Indexed lexicon in ~3.1f seconds.~n", [(time / 1_000_000)]
     index
   end
