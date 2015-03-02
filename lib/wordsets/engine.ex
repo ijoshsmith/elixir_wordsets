@@ -56,8 +56,8 @@ defmodule Wordsets.Engine do
   
   defp is_viable_at(tail_offset, words, find_words, size) do
     prefix = make_prefix_at (size + tail_offset), words
-    words = find_words.(prefix, size)
-    length(words) > 0
+    available_words = find_words.(prefix, size)
+    length(available_words) > 0
   end
 
 end
