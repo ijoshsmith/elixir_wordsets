@@ -6,6 +6,7 @@ O B O E
 S O F A
 H E A D
 ```
+Read an article about this program [on my blog](http://ijoshsmith.com/2015/03/14/functional-parallel-programming-in-elixir/).
 ## How to run the program
 Assuming you have [Elixir](http://elixir-lang.org/install.html) installed, open Terminal in this project's root directory and load its *mix.exs* file into the interactive Elixir console (IEx):
 ```
